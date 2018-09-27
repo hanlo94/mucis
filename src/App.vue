@@ -39,10 +39,4 @@
     transform translate(-50%,-50%)
     &>img 
       height 100px
-      
-  
-    
-    
-    
-
 </style>
