@@ -9,6 +9,7 @@
       </div>
       <img src="./assets/imge/sj.png" alt="toggle">
     </div>
+    <router-view></router-view>
   </div>
 </template>
 <style lang="stylus" scoped>
@@ -23,7 +24,7 @@
     left 0
     top 0
     &>img
-      height 68px
+      height 64px
       position absolute
       top 50%
       transform translate(0,-50%)
@@ -33,6 +34,7 @@
     right 34px
   #nav-main
     height 100px
+    width 382px
     position absolute 
     left 50%
     top 50%

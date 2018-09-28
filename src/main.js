@@ -6,7 +6,6 @@ import "./assets/script/basefont.js";
 import "./assets/stylus/base.styl";
 Vue.config.productionTip = false;
 
-
 new Vue({
   router,
   store,
