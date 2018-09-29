@@ -7,7 +7,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    bannerImgSrc: []
+    bannerImgSrc: [],
+    personalized: [],
   },
   mutations: {
     setBannerData(state, payload) {
@@ -16,6 +17,9 @@ export default new Vuex.Store({
         bannerImgSrc.push(element.picUrl)
       });
       state.bannerImgSrc = bannerImgSrc
+    },
+    setPersonalized(state, payload) {
+      state.personalized = payload.data.result
     }
   },
   actions: {
@@ -28,6 +32,16 @@ export default new Vuex.Store({
         .catch(function(err) {
           alert(err);
         });
+    },
+    getPersonalized(context) {
+      axios
+        .get(api.personalized +"?limit=6")
+        .then(data => {
+          context.commit("setPersonalized",data)
+        })
+        .catch(function(err) {
+          alert(err);
+        })
     }
   }
 });
